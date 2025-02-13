@@ -3,85 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Header with Tailwind CSS</title>
+    <title>Responsive Grid Layout with Tailwind CSS</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header class="flex flex-wrap items-center justify-between bg-gray-100 p-4 shadow-md w-full">
+<body class="bg-blue-900 text-white">
+
+    <!-- Header -->
+    <header class="grid grid-cols-3 items-center bg-gray-100 p-4 shadow-md w-full">
         <!-- Left Logo -->
-        <img src="./img/Askmeidentity_2-removebg-preview.png" alt="Logo" class="w-[191px] h-[110px]">
+        <div>
+            <img src="./img/Askmeidentity_2-removebg-preview.png" alt="Logo" class="w-[191px] h-[110px]">
+        </div>
 
         <!-- Navigation Links -->
-        <nav class="flex flex-wrap items-center justify-center space-x-6">
+        <nav class="hidden md:flex justify-center space-x-6">
             <button class="text-gray-700 hover:text-blue-600">Home</button>
             <button class="text-gray-700 hover:text-blue-600">About</button>
             <button class="text-gray-700 hover:text-blue-600">Courses</button>
             <button class="text-gray-700 hover:text-blue-600">Contact</button>
         </nav>
-        
-        <!-- Middle Image -->
-        <img src="./img/Group 1.png" alt="Middle Image" class="w-[130px] h-[33px] mx-auto">
-        
+
         <!-- Right Buttons -->
-        <div class="flex flex-wrap items-center space-x-4">
+        <div class="flex justify-end space-x-4">
             <button class="text-gray-700 hover:text-blue-600">Login</button>
             <button class="bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800">Signup</button>
         </div>
     </header>
-    <div class="bg-gray-100 flex justify-center items-center min-h-screen p-6">
-    <div class="bg-blue-900 text-white rounded-lg shadow-xl p-10 w-full max-w-6xl">
-        <div class="flex flex-col md:flex-row items-center">
-          
-          <!-- Left Content -->
-          <div class="flex-1 space-y-4">
-            <h4 class="text-lg font-semibold">SUCCESSFUL COACHERS ARE VISIONARIES</h4>
-            <h1 class="text-3xl font-bold">
-              A good <span class="text-blue-500">coaching</span> is good teaching & nothing else.
-            </h1>
-            <h7 class="text-lg block">Shyam</h7>
-            <p class="text-sm">In a coaching role, you ask the questions and rely more on your staff, who become the experts to provide the information.</p>
-    
-            <!-- Buttons -->
-            <div class="flex space-x-4 mt-4">
-              <button class="border border-white text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
-                View Courses
-              </button>
-              <button class="bg-white text-blue-900 px-5 py-2 rounded-lg hover:bg-gray-300 transition">
-                Get Free Consultation
-              </button>
-            </div>
-    
-            <!-- Input Box -->
-            <div class="flex mt-6 space-x-2">
-              <input type="text" class="flex-1 px-4 py-2 bg-white text-gray-900 rounded-lg focus:outline-none" 
-                     placeholder="What do you want to learn today?">
-              <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-500 transition">
-                Search
-              </button>
-            </div>
-          </div>
-    
-          <!-- Right Image -->
-          <div class="relative mt-6 md:mt-0">
 
-            <img src="./img/brunette-woman-hugging-laptop_1-removebg-preview.png" 
-                 alt="Coaching Image" 
-                 class="w-[558px] h-[922px] object-cover border-4 border-white p-4">
-          </div>
-    
+    <!-- Main Section -->
+    <div class="min-h-screen flex justify-center items-center px-6">
+        <div class="bg-blue-900 text-white rounded-lg shadow-xl p-10 w-full max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+                <!-- Left Content -->
+                <div class="space-y-6">
+                    <h4 class="text-lg font-semibold">SUCCESSFUL COACHES ARE VISIONARIES</h4>
+                    <h1 class="text-3xl font-bold leading-tight">
+                        A good <span class="text-blue-400">coaching</span> is good teaching & nothing else.
+                    </h1>
+                    <h7 class="text-lg block">Shyam</h7>
+                    <p class="text-sm max-w-md">
+                        In a coaching role, you ask the questions and rely more on your staff, 
+                        who become the experts to provide the information.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <button class="border border-white text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                            View Courses
+                        </button>
+                        <button class="bg-white text-blue-900 px-6 py-2 rounded-lg hover:bg-gray-300 transition">
+                            Get Free Consultation
+                        </button>
+                    </div>
+
+                    <!-- Input Box -->
+                    <div class="grid grid-cols-[1fr_auto] gap-2">
+                        <input type="text" class="px-4 py-2 bg-white text-gray-900 rounded-lg focus:outline-none" 
+                               placeholder="What do you want to learn today?">
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-500 transition">
+                            Search
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="flex justify-center">
+                    <img src="./img/brunette-woman-hugging-laptop_1-removebg-preview.png" 
+                         alt="Coaching Image" 
+                         class="w-[400px] md:w-[500px] object-cover">
+                </div>
+            </div>
+
+            <!-- Brand Logos -->
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-6 mt-10">
+                <img src="./img/Link ⏵ brand6.png.png" alt="Brand 1" class="w-24 h-auto mx-auto">
+                <img src="./img/Link ⏵ brand6.png.png" alt="Brand 2" class="w-24 h-auto mx-auto">
+                <img src="./img/Link ⏵ brand12.png.png" alt="Brand 3" class="w-24 h-auto mx-auto">
+                <img src="./img/Link ⏵ brand4.png.png" alt="Brand 4" class="w-24 h-auto mx-auto">
+                <img src="./img/Link ⏵ brand5.png.png" alt="Brand 5" class="w-24 h-auto mx-auto">
+                <img src="./img/Link ⏵ brand66.png.png" alt="Brand 6" class="w-24 h-auto mx-auto">
+            </div>
+
         </div>
-    
-        <!-- Brand Logos -->
-        <div class="flex justify-center space-x-6 mt-10">
-          <img src="./img/Link ⏵ brand6.png.png" alt="Brand 1" class="w-24 h-auto">
-          <img src="./img/Link ⏵ brand6.png.png" alt="Brand 2" class="w-24 h-auto">
-          <img src="./img/Link ⏵ brand12.png.png" alt="Brand 3" class="w-24 h-auto">
-          <img src="./img/Link ⏵ brand4.png.png" alt="Brand 4" class="w-24 h-auto">
-          <img src="./img/Link ⏵ brand5.png.png" alt="Brand 5" class="w-24 h-auto">
-          <img src="./img/Link ⏵ brand66.png.png" alt="Brand 6" class="w-24 h-auto">
-        </div>
-    
-      </div>
     </div>
+
 </body>
 </html>
