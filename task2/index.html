@@ -6,28 +6,45 @@
     <title>Responsive Grid Layout with Tailwind CSS</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-blue-900 text-white">
+<body>
 
-    <!-- Header -->
-    <header class="grid grid-cols-3 items-center bg-gray-100 p-4 shadow-md w-full">
-        <!-- Left Logo -->
-        <div class="flex justify-center sm:justify-start">
-            <img src="./img/Askmeidentity_2-removebg-preview.png" alt="Logo" class="w-[191px] h-[110px]">
-        </div>
+   <!-- Header -->
+<header class="grid grid-cols-3 items-center bg-gray-100 p-4 shadow-md w-full">
+    <!-- Left Logo -->
+    <div class="flex justify-center sm:justify-start">
+        <img src="./img/Askmeidentity_2-removebg-preview.png" alt="Logo" class="w-[150px] sm:w-[191px] h-[80px] sm:h-[110px]">
+    </div>
 
-        <!-- Navigation Links -->
-        <nav class="hidden md:flex justify-center space-x-6">
-            <button class="text-gray-700 hover:text-blue-600">Home</button>
-            <button class="text-gray-700 hover:text-blue-600">About</button>
-            <button class="text-gray-700 hover:text-blue-600">Courses</button>
-            <button class="text-gray-700 hover:text-blue-600">Contact</button>
-        </nav>
+    <!-- Navigation Links for Desktop (Hidden on Mobile) -->
+    <nav class="hidden md:flex justify-center space-x-6">
+        <button class="text-gray-700 hover:text-blue-600">Home</button>
+        <button class="text-gray-700 hover:text-blue-600">About</button>
+        <button class="text-gray-700 hover:text-blue-600">Courses</button>
+        <button class="text-gray-700 hover:text-blue-600">Contact</button>
+    </nav>
 
-        <!-- Right Buttons -->
-        <div class="flex justify-end space-x-4">
-            <button class="text-gray-700 hover:text-blue-600">Login</button>
-            <button class="bg-volite-700 text-white px-4 py-2 rounded-md hover:bg-blue-800">Signup</button>
-        </div>
+    <!-- Right Buttons -->
+    <div class="flex justify-end space-x-4">
+        <button class="text-gray-700 hover:text-blue-600">Login</button>
+        <button class="bg-volite-700 text-white px-4 py-2 rounded-md hover:bg-blue-800">Signup</button>
+    </div>
+</header>
+
+<!-- Mobile Navigation (Hidden on Desktop) -->
+<div class="md:hidden flex justify-between p-4 bg-gray-100 shadow-md">
+    <!-- Mobile Logo -->
+    <div class="flex justify-start">
+        <img src="./img/Askmeidentity_2-removebg-preview.png" alt="Logo" class="w-[150px] h-[80px]">
+    </div>
+
+    <!-- Mobile Menu Button (Placeholder for hamburger menu) -->
+    <button class="text-gray-700 hover:text-blue-600">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+</div>
+
     </header>
     
     <div class="bg-gradient-to-r from-purple-900 via-purple-700 to-blue-700 text-white min-h-screen flex flex-col justify-between">
@@ -62,13 +79,13 @@
         </div>
 
         <!-- Footer with Brands -->
-        <div class="py-6 bg-gradient-to-r from-purple-900 to-blue-700 flex justify-center space-x-10">
-            <img src="./img/Link ⏵ brand6.png.png" alt="Spotify" class="h-6">
-            <img src="./img/Link ⏵ brand6.png.png" alt="Amazon" class="h-6">
-            <img src="./img/Link ⏵ brand12.png.png" alt="Spotify" class="h-6">
-            <img src="./img/Link ⏵ brand4.png.png" alt="Cisco" class="h-6">
-            <img src="./img/Link ⏵ brand5.png.png" alt="Logitech" class="h-6">
-            <img src="./img/Link ⏵ brand66.png.png" alt="Amazon" class="h-6">
+        <div class="py-6 bg-gradient-to-r from-purple-900 to-blue-700 flex flex-wrap justify-center gap-6">
+            <img src="./img/Link ⏵ brand6.png.png" alt="Spotify" class="h-6 w-auto">
+            <img src="./img/Link ⏵ brand6.png.png" alt="Amazon" class="h-6 w-auto">
+            <img src="./img/Link ⏵ brand12.png.png" alt="Spotify" class="h-6 w-auto">
+            <img src="./img/Link ⏵ brand4.png.png" alt="Cisco" class="h-6 w-auto">
+            <img src="./img/Link ⏵ brand5.png.png" alt="Logitech" class="h-6 w-auto">
+            <img src="./img/Link ⏵ brand66.png.png" alt="Amazon" class="h-6 w-auto">
         </div>
     </div>
     
@@ -81,35 +98,35 @@
             <p class="text-lg mt-4">THE FEATURE COURSES ARE WE INVENTED OUR TEACHING PART</p>
         </section>
 
-        <!-- Grid Layout for 3 Boxes (Images) -->
-        <section class="py-16">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="./img/Group 1000014973.png" alt="Group Image 1" class="w-full h-auto">
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="./img/Group 2.png" alt="Group Image 2" class="w-full h-auto">
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="./img/Group 3.png" alt="Group Image 3" class="w-full h-auto">
-                </div>
-            </div>
-        </section>
+       <!-- Grid Layout for 3 Boxes (Images) -->
+<section class="py-16">
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img src="./img/Group 1000014973.png" alt="Group Image 1" class="w-full h-auto">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img src="./img/Group 2.png" alt="Group Image 2" class="w-full h-auto">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img src="./img/Group 3.png" alt="Group Image 3" class="w-full h-auto">
+        </div>
+   
 
-        <!-- Another Row of 3 Boxes (Images) -->
-        <section class="py-16">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="./img/Group 2.1.png" alt="Group Image 4" class="w-full h-auto">
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="./img/Group 2.2.png" alt="Group Image 5" class="w-full h-auto">
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="./img/Group 2.3.png" alt="Group Image 6" class="w-full h-auto">
-                </div>
-            </div>
-        </section>
+<!-- Another Row of 3 Boxes (Images) -->
+
+    
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img src="./img/Group 2.1.png" alt="Group Image 4" class="w-full h-auto">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img src="./img/Group 2.2.png" alt="Group Image 5" class="w-full h-auto">
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img src="./img/Group 2.3.png" alt="Group Image 6" class="w-full h-auto">
+        </div>
+ 
+    </div>
+</section>
 
         <!-- Explore Courses Button -->
         <section class="text-center py-8">
@@ -126,71 +143,98 @@
             <img src="./img/Group 1.1.1.png" alt="Course Image" class="w-full max-w-screen-md h-auto">
         </div>
     </div>
+<!--new -->
+<div class="bg-gradient-to-b from-white to-blue-100 p-10">
+<div class="text-center">
+    <h2 class="text-2xl font-semibold text-gray-800">Top <span class="text-blue-600">Categories</span></h2>
+    <p class="text-gray-500">100+ unique online course list designs</p>
+</div>
 
-    <div class="bg-blue-100 flex flex-col items-center text-center p-8 min-h-screen">
-        <h1 class="text-4xl font-bold">Top Categories</h1>
-        <p class="mt-4 text-lg">100+ unique online courses list designs</p>
-        <div class="flex flex-wrap justify-center mt-6">
-            <div class="m-4">
-                <img src="./img/1.png" alt="Image 1" class="w-64 h-80">
-            </div>
-            <div class="m-4">
-                <img src="./img/2.png" alt="Image 2" class="w-64 h-80">
-            </div>
-            <div class="m-4">
-                <img src="./img/3.png" alt="Image 3" class="w-64 h-80">
-            </div>
-            <div class="m-4">
-                <img src="./img/4.png" alt="Image 4" class="w-64 h-80">
-            </div>
-            <div class="m-4">
-                <img src="./img/5.png" alt="Image 5" class="w-64 h-80">
-            </div>
-            <div class="m-4">
-                <img src="./img/6.png" alt="Image 6" class="w-64 h-80">
-            </div>
+<div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+        <img src="./img/imag1.png" alt="Digital Marketing" class="mx-auto w-12 h-12">
+        <h3 class="mt-4 font-semibold text-gray-800">Digital Marketing</h3>
+        <p class="text-gray-500">25 Courses</p>
+    </div>
+    
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+        <img src="./img/imag2.png" alt="Web Development" class="mx-auto w-12 h-12">
+        <h3 class="mt-4 font-semibold text-gray-800">Web Development</h3>
+        <p class="text-gray-500">16 Courses</p>
+    </div>
+    
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+        <img src="./img/imag3.png" alt="Art & Humanities" class="mx-auto w-12 h-12">
+        <h3 class="mt-4 font-semibold text-gray-800">Art & Humanities</h3>
+        <p class="text-gray-500">76 Courses</p>
+    </div>
+    
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+        <img src="./img/imag4.png" alt="Personal Development" class="mx-auto w-12 h-12">
+        <h3 class="mt-4 font-semibold text-gray-800">Personal Development</h3>
+        <p class="text-gray-500">22 Courses</p>
+    </div>
+    
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+        <img src="./img/imag5.png" alt="IT and Software" class="mx-auto w-12 h-12">
+        <h3 class="mt-4 font-semibold text-gray-800">IT and Software</h3>
+        <p class="text-gray-500">110 Courses</p>
+    </div>
+    
+    <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+        <img src="./img/imag6.png" alt="Graphic Design" class="mx-auto w-12 h-12">
+        <h3 class="mt-4 font-semibold text-gray-800">Graphic Design</h3>
+        <p class="text-gray-500">85 Courses</p>
+    </div>
+  </div>
+</div>
+<!--new end -->
+<div class="flex items-center justify-center">
+    <div class="relative w-full max-w-lg bg-gradient-to-r from-purple-900 via-purple-700 to-blue-700 rounded-xl text-center text-white shadow-lg p-6">
+        <h2 class="text-2xl font-bold sm:text-3xl">Subscribe For Get Update <br> Every New Courses</h2>
+        <p class="mt-2 text-sm sm:text-base">20k+ students daily learn with Eduvi. Subscribe for new courses.</p>
+        <div class="mt-5 flex items-center justify-center space-x-2">
+            <input type="email" placeholder="enter your email" class="p-3 rounded-l-lg w-3/4 sm:w-2/3 text-gray-700 outline-none">
+            <button class="bg-blue-600 px-5 py-3 rounded-r-lg text-white font-semibold">Subscribe</button>
+        </div>
+
+        <!-- Top-Left User Image -->
+        <div class="absolute top-5 left-5 w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-white">
+            <img src="./img/1.1.1.png" alt="user">
+        </div>
+        <!-- Top-Right User Image -->
+        <div class="absolute top-10 right-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-white">
+            <img src="./img/1.1.3.png" alt="user">
+        </div>
+        <!-- Bottom-Left User Image -->
+        <div class="absolute bottom-10 left-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-white">
+            <img src="./img/1.1.2.png" alt="user">
+        </div>
+        <!-- Bottom-Right User Image -->
+        <div class="absolute bottom-5 right-5 w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-white">
+            <img src="./img/1.1.1.png" alt="user">
         </div>
     </div>
+</div>
 
-    <div class="flex items-center justify-center bg-gradient-to-r from-blue-400 to-purple-500 ">
-        <div class="relative w-[90%] max-w-2xl bg-gradient-to-r from-purple-900 via-purple-700 to-blue-700  rounded-xl text-center text-white shadow-lg">
-            <h2 class="text-2xl font-bold">Subscribe For Get Update <br> Every New Courses</h2>
-            <p class="mt-2 text-sm">20k+ students daily learn with Eduvi. Subscribe for new courses.</p>
-            <div class="mt-5 flex items-center justify-center">
-                <input type="email" placeholder="enter your email" class="p-3 rounded-l-lg w-2/3 text-gray-700 outline-none">
-                <button class="bg-blue-600 px-5 py-3 rounded-r-lg text-white font-semibold">Subscribe</button>
-            </div>
-            <div class="absolute top-5 left-5 w-10 h-10 rounded-full overflow-hidden border-2 border-white">
-                <img src="./img/1.1.1.png" alt="user">
-            </div>
-            <div class="absolute top-10 right-10 w-10 h-10 rounded-full overflow-hidden border-2 border-white">
-                <img src="./img/1.1.3.png" alt="user">
-            </div>
-            <div class="absolute bottom-10 left-10 w-10 h-10 rounded-full overflow-hidden border-2 border-white">
-                <img src="./img/1.1.2.png" alt="user">
-            </div>
-            <div class="absolute bottom-5 right-5 w-10 h-10 rounded-full overflow-hidden border-2 border-white">
-                <img src="./img/1.1.1.png" alt="user">
-            </div>
-        </div>
-    </div>
 
-    <div class="flex items-center justify-center min-h-screen bg-gray-100">
-        <div class="relative bg-white p-6 rounded-lg shadow-lg">
-            <!-- Video Frame -->
-            <div class="relative overflow-hidden rounded-lg w-[600px] h-[320px]">
-                <img src="./img/last img.png" alt="Video Thumbnail" class="w-full h-full object-cover">
-                <!-- Play Button Overlay -->
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="bg-white bg-opacity-50 p-4 rounded-full">
-                        <div class="bg-purple-500 p-4 rounded-full">
-                            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        </div>
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="relative bg-white p-6 rounded-lg shadow-lg w-full max-w-[600px]">
+        <!-- Video Frame -->
+        <div class="relative overflow-hidden rounded-lg w-full h-64 sm:h-[320px]">
+            <img src="./img/last img.png" alt="Video Thumbnail" class="w-full h-full object-cover">
+            <!-- Play Button Overlay -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="bg-white bg-opacity-50 p-4 rounded-full">
+                    <div class="bg-purple-500 p-4 rounded-full">
+                        <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
     <footer class="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-10 px-5">
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center md:text-left">
           <div>
