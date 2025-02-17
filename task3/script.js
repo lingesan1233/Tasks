@@ -1,55 +1,69 @@
-const board = document.getElementById("game-board");
-const restartBtn = document.getElementById("restart");
-const emojis = ["🍎", "🍌", "🍇", "🍉", "🍎", "🍌", "🍇", "🍉"];
-let shuffledCards, flippedCards = [], matchedPairs = 0;
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+    const gameBoard = document.getElementById("gameBoard");
+    const restartButton = document.getElementById("restart");
+    
+    const cardsArray = ["A", "A", "B", "B", "C", "C", "D", "D", "E", "E", "F", "F", "G", "G", "H", "H"];
+    let cards = [];
+    let flippedCards = [];
+    let matchedCards = 0;
 
-function shuffle() {
-    shuffledCards = emojis.sort(() => Math.random() - 0.5);
-}
+    function shuffle(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
 
-function createBoard() {
-    board.innerHTML = "";
-    shuffle();
-    shuffledCards.forEach((emoji, i) => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.dataset.emoji = emoji;
-        card.textContent = "?";
-        card.addEventListener("click", flipCard);
-        board.appendChild(card);
-    });
-}
+    function createBoard() {
+        gameBoard.innerHTML = "";
+        cards = shuffle(cardsArray).map(value => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.dataset.value = value;
+            card.addEventListener("click", flipCard);
+            gameBoard.appendChild(card);
+            return card;
+        });
+    }
 
-function flipCard() {
-    if (flippedCards.length < 2 && !this.classList.contains("flipped")) {
-        this.textContent = this.dataset.emoji;
-        this.classList.add("flipped");
-        flippedCards.push(this);
+    function flipCard() {
+        if (flippedCards.length < 2 && !this.classList.contains("flipped")) {
+            this.innerText = this.dataset.value;
+            this.classList.add("flipped");
+            flippedCards.push(this);
 
-        if (flippedCards.length === 2) {
-            setTimeout(checkMatch, 500);
+            if (flippedCards.length === 2) {
+                checkMatch();
+            }
         }
     }
-}
 
-function checkMatch() {
-    let [card1, card2] = flippedCards;
-    if (card1.dataset.emoji === card2.dataset.emoji) {
-        matchedPairs++;
-        flippedCards = [];
-        if (matchedPairs === emojis.length / 2) alert("You win!");
-    } else {
-        card1.textContent = "?";
-        card2.textContent = "?";
-        card1.classList.remove("flipped");
-        card2.classList.remove("flipped");
-        flippedCards = [];
+    function checkMatch() {
+        const [card1, card2] = flippedCards;
+        if (card1.dataset.value === card2.dataset.value) {
+            card1.classList.add("matched");
+            card2.classList.add("matched");
+            matchedCards += 2;
+            flippedCards = [];
+        } else {
+            card1.classList.add("incorrect");
+            card2.classList.add("incorrect");
+            setTimeout(() => {
+                card1.innerText = "";
+                card2.innerText = "";
+                card1.classList.remove("flipped", "incorrect");
+                card2.classList.remove("flipped", "incorrect");
+                flippedCards = [];
+            }, 1000);
+        }
+        if (matchedCards === cardsArray.length) {
+            setTimeout(() => alert("Congratulations! You won!"), 500);
+        }
     }
-}
 
-restartBtn.addEventListener("click", () => {
-    matchedPairs = 0;
-    flippedCards = [];
+    restartButton.addEventListener("click", () => {
+        matchedCards = 0;
+        flippedCards = [];
+        createBoard();
+    });
+
     createBoard();
 });
-createBoard();
