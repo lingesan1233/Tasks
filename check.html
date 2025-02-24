@@ -3,81 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Featured Courses</title>
+    <title>Dice Game</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-blue-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-12 py-12">
-        <div class="text-center mb-8">
-            <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800">
-                Featured <span class="text-blue-600">Course</span>
-            </h2>
-            <p class="text-gray-500 mt-2 uppercase text-sm">The feature courses are we invented our teaching part</p>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+    <h1 class="text-3xl font-bold mb-6">Roll the Dice!</h1>
+    
+    <div class="flex space-x-6">
+        <div class="flex flex-col items-center">
+            <p class="text-lg">Dice 1</p>
+            <div id="dice1" class="w-20 h-20 flex items-center justify-center text-3xl font-bold bg-white text-black rounded-lg shadow-md">🎲</div>
         </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <!-- Course Cards -->
-            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center">
-                <img src="course1.png" alt="Course Image" class="rounded-md w-full object-cover">
-                <div class="mt-4">
-                    <p class="text-gray-500 text-xs">1.2K+ Students • 6h 30m</p>
-                    <h3 class="mt-2 font-semibold text-gray-800">Motion Graphics: Create a Nice Typography Animation</h3>
-                    <p class="text-blue-600 font-semibold mt-3">Rs.499</p>
-                </div>
-            </div>
-            
-            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center">
-                <img src="course2.png" alt="Course Image" class="rounded-md w-full object-cover">
-                <div class="mt-4">
-                    <p class="text-gray-500 text-xs">5.5K+ Students • 8h 30m</p>
-                    <h3 class="mt-2 font-semibold text-gray-800">Advance PHP knowledge with JS to make smart web</h3>
-                    <p class="text-blue-600 font-semibold mt-3">Rs.499</p>
-                </div>
-            </div>
-            
-            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center">
-                <img src="course3.png" alt="Course Image" class="rounded-md w-full object-cover">
-                <div class="mt-4">
-                    <p class="text-gray-500 text-xs">2K+ Students • 6h 30m</p>
-                    <h3 class="mt-2 font-semibold text-gray-800">Education Software and PHP and JS System Script</h3>
-                    <p class="text-blue-600 font-semibold mt-3">Rs.499</p>
-                </div>
-            </div>
-            
-            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center">
-                <img src="course4.png" alt="Course Image" class="rounded-md w-full object-cover">
-                <div class="mt-4">
-                    <p class="text-gray-500 text-xs">9.1K+ Students • 8h 30m</p>
-                    <h3 class="mt-2 font-semibold text-gray-800">The Complete Financial Analyst Training & Investing</h3>
-                    <p class="text-blue-600 font-semibold mt-3">Rs.499</p>
-                </div>
-            </div>
-            
-            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center">
-                <img src="course5.png" alt="Course Image" class="rounded-md w-full object-cover">
-                <div class="mt-4">
-                    <p class="text-gray-500 text-xs">950+ Students • 6h 30m</p>
-                    <h3 class="mt-2 font-semibold text-gray-800">Marketing 2023: Complete Guide To Instagram Growth</h3>
-                    <p class="text-blue-600 font-semibold mt-3">Rs.499</p>
-                </div>
-            </div>
-            
-            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center">
-                <img src="course6.png" alt="Course Image" class="rounded-md w-full object-cover">
-                <div class="mt-4">
-                    <p class="text-gray-500 text-xs">4.8K+ Students • 7h 30m</p>
-                    <h3 class="mt-2 font-semibold text-gray-800">Learn 3D Modelling and Design for Beginners</h3>
-                    <p class="text-blue-600 font-semibold mt-3">Rs.499</p>
-                </div>
-            </div>
+        <div class="flex flex-col items-center">
+            <p class="text-lg">Dice 2</p>
+            <div id="dice2" class="w-20 h-20 flex items-center justify-center text-3xl font-bold bg-white text-black rounded-lg shadow-md">🎲</div>
         </div>
     </div>
     
-    <!-- Explore Courses Button -->
-    <section class="text-center py-8">
-        <button class="bg-blue-800 text-white text-lg px-6 py-3 rounded-lg hover:bg-blue-900 transition duration-300">
-            Explore Courses
-        </button>
-    </section>
+    <button onclick="rollDice()" class="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md">Roll Dice</button>
+    
+    <p id="result" class="text-xl mt-4 font-semibold"></p>
+
+    <script>
+        function rollDice() {
+            const dice1 = Math.floor(Math.random() * 6) + 1;
+            const dice2 = Math.floor(Math.random() * 6) + 1;
+            
+            document.getElementById('dice1').textContent = dice1;
+            document.getElementById('dice2').textContent = dice2;
+            
+            const resultText = dice1 === dice2 ? 'You rolled a double! 🎉' : `Total: ${dice1 + dice2}`;
+            document.getElementById('result').textContent = resultText;
+        }
+    </script>
 </body>
 </html>
