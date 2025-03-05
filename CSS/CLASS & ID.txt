@@ -1,0 +1,35 @@
+							HTML
+<!DOCTYPE html>
+<html>
+    <title> External css</title>
+        <link rel="stylesheet" href="stylesheet.css">
+     <body>
+        <h1>
+            jocker
+        </h1>
+        <p class="myfirsttry">
+            just for jock
+        </p>
+        <p class="myfirsttry myfirsttry2">
+            just for jock
+        </p>
+        <p class="my first try" id="firstID">
+            just for jock
+        </p>
+    </body>
+    
+</html>
+							   CSS
+.myfirsttry
+{
+    color: aqua;
+}
+.myfirsttry2
+{
+color: red;
+}
+#firstID
+{
+    font-size: large;
+    color: blueviolet;
+}CSS

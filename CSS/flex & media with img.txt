@@ -1,0 +1,56 @@
+						       HTML
+<!DOCTYPE html>
+<html>
+    <title>
+flex
+    </title>
+    <link rel="stylesheet"href="style.css">
+    <body>
+        <h1>
+            jock
+        </h1>
+        <div class="cont">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+           <img src="C:\Users\lingesan\Pictures\images.jpg">
+
+        </div>
+    </body>
+</html>
+              					CSS
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+body{
+    color: aqua;
+    }
+    .cont{
+        background-color: blueviolet;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        }
+       .img
+       {
+         width: 33%;
+       }
+        @media screen and(max-width:768px) {
+            .img{
+                width: 50%;
+            }
+            
+        }
+        @media screen and(max-width:480px) {
+            .img{
+                width: 100%;
+            }
+            
+        }                                                                                             10:24 AM 10/12/2024

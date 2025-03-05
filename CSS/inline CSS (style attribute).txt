@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>start a css</title>
+</head>
+<body>
+   <h1 style="color: aqua;">css</h1>
+</body>
+</html>

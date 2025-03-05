@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example Form</title>
+</head>
+<body>
+    <form>
+        <h1>Example Program</h1>
+        <p>Please enter the data correctly.</p>
+
+        <h2>Email</h2>
+        <input type="email" required>
+
+        <h2>Name</h2>
+        <input type="text" required>
+
+        <h2>Password</h2>
+        <input type="password" required>
+
+        <hr>
+
+        <h2>Enter the current date and time</h2>
+        <input type="datetime-local" required>
+
+        <h2>Agree to Terms and Conditions</h2>
+        <p>Just for joke</p>
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree</label>
+
+        <h2>Favorite Programming Language</h2>
+        <input list="languages" id="favorite-lang" required>
+        <datalist id="languages">
+            <option value="Java">
+            <option value="C">
+            <option value="C++">
+            <option value="HTML">
+        </datalist>
+        <label for="favorite-lang">Select your favorite:</label>
+
+        <br><br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

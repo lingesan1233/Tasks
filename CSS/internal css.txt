@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        internal css
+    </title>
+    <style>
+        h1{color: blue;}
+    </style>
+    <body>
+        <h1>
+            jocker
+        </h1>
+        <p>
+            just for jock
+        </p>
+
+    </body>
+</html>

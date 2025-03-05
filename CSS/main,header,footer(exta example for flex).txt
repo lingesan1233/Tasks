@@ -1,0 +1,52 @@
+						            HTML
+---------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+    <title>
+flex
+    </title>
+    <link rel="stylesheet"href="style.css">
+    <body>
+        <header>
+            jock
+        </header>
+        <main class="cont">
+            <div class="iteam">side</div>
+            <div class="iteam1">senter</div>
+            <div class="iteam2">side2</div>
+        </main>
+        <footer>end of  the body</footer>
+       
+    </body>
+</html>
+							CSS
+---------------------------------------------------------------------------------------------------------------------------
+.cont{
+    display: flex;
+    flex-direction:row;
+    background-color: blue;
+}
+.header,footer{
+    width: 10;
+    color: chartreuse;
+    background-color: blueviolet;
+    margin: 20px;
+}
+.iteam{
+    width: 50%;
+    margin: 2px;
+    color: aqua;
+    background-color: black;
+}
+.iteam1{
+    width: 60%;
+    margin: 2px;
+    color: aqua;
+    background-color: black;
+}
+.iteam2{
+    width: 50%;
+    margin: 2px;
+    color: aqua;
+    background-color: black;
+}                                                                                                       11:47 PM 10/12/2024

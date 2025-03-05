@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Import Example</title>
+</head>
+<body>
+
+<h1>My Favorite Image</h1>
+<img src="This pc/New Volume(D:)/my photos/IMG-20240821-WA0006.jpg">
+
+<p>This is an example of an image imported from the web.</p>
+
+</body>
+</html>
+ "This code is under currection"

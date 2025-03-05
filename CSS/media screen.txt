@@ -1,0 +1,32 @@
+						       html
+<!DOCTYPE html>
+
+<html>
+    <title>
+        media screen
+    </title>
+    <body>
+        <h1>
+            just for jock
+        </h1>
+        <img src="linl of the image"
+</body>
+</html>
+						       css
+img{
+    width: 33.3%;
+    height: 200px;
+}
+@media screen and (max-width:768px) {
+    img{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    img{
+        width: 100%;
+    }
+    
+}                                                                                                    
+                                                                                                         6:34 PM 10/11/2024

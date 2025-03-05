@@ -1,0 +1,37 @@
+								HTML
+<!DOCTYPE html>
+<html>
+    <title>
+flex
+    </title>
+    <link rel="stylesheet"href="style.css">
+    <body>
+        <h1>
+            jock
+        </h1>
+        <div class="cont">
+            <div class="iteam">12</div>
+            <div class="iteam">2</div>
+            <div class="iteam">1</div>
+            <div class="iteam">120</div>
+            <div class="iteam">44</div>
+            <div class="iteam">14</div>
+        </div>
+    </body>
+</html>
+							    CSS
+body{
+color: aqua;
+}
+.cont{
+    background-color: blueviolet;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+    .iteam{
+        background-color: blue;
+        width: 50px;
+        height: 50px;
+        margin: 2px;
+    }                                                                                                   9:59 AM 10/12/2024

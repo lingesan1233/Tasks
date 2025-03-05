@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <titl>
+        internal css
+        <link rel="stylesheet" href="stylesheet.css">
+    </titl>
+    <body>
+        <h1>
+            jocker
+        </h1>
+        <p>
+            just for jock
+        </p>
+
+    </body>
+</html>
+|
+|
+|
+|
+|
+|
+{separate css code}
+h1
+{
+    color: blueviolet;
+}
