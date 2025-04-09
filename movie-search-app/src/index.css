@@ -1,0 +1,85 @@
+.movie-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  max-width: 200px;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.fav-btn {
+  margin-top: 10px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.search-section {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.error-message {
+  color: red;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 1rem;
+}
+
+.pagination-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+.movie-detail-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.movie-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.movie-poster {
+  width: 250px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.movie-info {
+  text-align: left;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+  line-height: 1.6;
+}
